@@ -2,9 +2,50 @@
 
 <html>
     <head>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #circle {
+               background-color: red;
+               border-radius: 50%;
+               height: 100px;
+               width: 100px; 
+               position: absolute;
+            }
+
+            #bottom {
+                margin-top: 2000px;
+                height: 100px;
+            }
+        </style>
     </head>
     <body>
+        <div
+        <div id="circle">
+
+        </div>
+
+        <div id="bottom">
+
+        </div>
+
+        <script>
+            var windowHeight = window.innerHeight;
+            console.log(windowHeight);
+var scrollArea = 1000 - windowHeight;
+        window.addEventListener('scroll', function() {
+        console.log("hi");
+  var scrollTop = window.pageYOffset //|| window.scrollTop;
+  var scrollPercent = scrollTop/scrollArea //|| 0;
+  console.log(scrollTop);
+  
+  document.getElementById("circle").style.top = scrollTop + 'px';
+  document.getElementById("circle").style.width = 
+  //square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
+});
+
         
+
+
+        </script>
     </body>
 </html>

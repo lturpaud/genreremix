@@ -83,12 +83,10 @@ function next(){
     watuse[1] = min[2] * min[1];
     document.querySelectorAll(".pgs")[i].style.display = "block";
     document.querySelectorAll(".pgs")[i - 1].style.display = "none";
-    var sum = watuse.reduce(add,0); // with initial value to avoid when the array is empty
-
-    function add(accumulator, a) {
-        return accumulator + a;
-    }
-    document.getElementById("results").innerHTML= watuse;
+    var sum = watuse.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    document.getElementById("results").innerHTML= sum;
 }
 
 function increaseamount2() {
@@ -192,7 +190,7 @@ function increaseamount8() {
     document.getElementById("increaseamount8").previousSibling.innerHTML = min[7];
 }function increaseamount9() {
     min[8] += 1;
-    document.getElementById("increaseamount9").previousSibling.innerHTML = min[8];
+    document.getElementById("increaseamount9").previousElementSibling.innerHTML = min[8];
 }function increaseamount10() {
     min[9] += 1;
     document.getElementById("increaseamount10").previousSibling.innerHTML = min[9];
@@ -221,6 +219,7 @@ function increaseamount8() {
 
 function decreaseamount8() {
     min[8] -= 1;
+    console.log("hi");
     document.getElementById("decreaseamount8").nextElementSibling.innerHTML = min[8];
 }function decreaseamount9() {
     min[9] -= 1;

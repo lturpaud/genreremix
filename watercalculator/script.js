@@ -95,9 +95,9 @@ watuse[13] = min[13] * 8000/365;
 watuse[14] = min[14] * 60/31;
     var sum1 = watuse.slice(0,6).reduce((a,b) => a + b);//sum up
     var sum2 = watuse.slice(8,17).reduce((a,b) => a + b)
-    document.getElementById("results").innerHTML= sum + "litres per day";
-    document.getElementById("results1").innerHTML= "Your total direct water use is:" + sum1 + "litres per day";
-    document.getElementById("results2").innerHTML= "Your total virtual water use is:" + sum2 + "litres per day";
+    document.getElementById("results").innerHTML= sum + " litres per day";
+    document.getElementById("results1").innerHTML= "Your total direct water use is: " + sum1 + " litres per day";
+    document.getElementById("results2").innerHTML= "Your total virtual water use is: " + sum2 + " litres per day";
     console.log(sum1, sum2);
 }
 

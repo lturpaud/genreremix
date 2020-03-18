@@ -193,28 +193,28 @@ function increaseamount8() {
     document.getElementById("increaseamount9").previousElementSibling.innerHTML = min[8];
 }function increaseamount10() {
     min[9] += 1;
-    document.getElementById("increaseamount10").previousSibling.innerHTML = min[9];
+    document.getElementById("increaseamount10").previousElementSibling.innerHTML = min[9];
 }function increaseamount11() {
     min[10] += 1;
-    document.getElementById("increaseamount11").previousSibling.innerHTML = min[10];
+    document.getElementById("increaseamount11").previousElementSibling.innerHTML = min[10];
 }function increaseamount12() {
     min[11] += 1;
-    document.getElementById("increaseamount12").previousSibling.innerHTML = min[11];
+    document.getElementById("increaseamount12").previousElementSibling.innerHTML = min[11];
 }function increaseamount13() {
     min[12] += 1;
-    document.getElementById("increaseamount13").previousSibling.innerHTML = min[12];
+    document.getElementById("increaseamount13").previousElementSibling.innerHTML = min[12];
 }function increaseamount14() {
     min[13] += 1;
-    document.getElementById("increaseamount14").previousSibling.innerHTML = min[13];
+    document.getElementById("increaseamount14").previousElementSibling.innerHTML = min[13];
 }function increaseamount15() {
     min[14] += 1;
-    document.getElementById("increaseamount15").previousSibling.innerHTML = min[14];
+    document.getElementById("increaseamount15").previousElementSibling.innerHTML = min[14];
 }function increaseamount16() {
     min[15] += 1;
-    document.getElementById("increaseamount16").previousSibling.innerHTML = min[15];
+    document.getElementById("increaseamount16").previousElementSibling.innerHTML = min[15];
 }function increaseamount17() {
     min[16] += 1;
-    document.getElementById("increaseamount17").previousSibling.innerHTML = min[16];
+    document.getElementById("increaseamount17").previousElementSibling.innerHTML = min[16];
 }
 
 function decreaseamount8() {

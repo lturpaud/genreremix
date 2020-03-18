@@ -1,0 +1,121 @@
+body {
+    background-color: #85C1E9;
+}
+
+#circle {
+    background-color: red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px; 
+    position: absolute;
+    top: 0;
+ }
+
+#bottom {
+     margin-top: 2000px;
+     height: 100px;
+ }
+
+ #grap {
+     border-top: 1px solid gray;
+     border-bottom: 1px solid gray;
+     border-right: 1px solid gray;
+     border-left: 1px solid gray;
+     width:100%;
+     height: 200px;
+     position: relative;
+ }
+
+ #grap1 {
+    position: relative;
+    border-right: 1px solid brown;
+    width: 25%;
+    height: 100%;
+    
+ }
+ #grap2 { 
+     position: relative;
+     border-right: 1px solid brown;
+     left: 25%;
+     width: 25%;
+     height: 100%;
+     top: -100%;
+ }
+
+ #grap3 {
+    position: relative;
+    border-right: 1px solid brown;
+    left: 50%;
+    width: 25%;
+    height: 100%;
+    top: -200%;
+}
+
+#grap4 {
+    position: relative;
+    left: 75%;
+    width: 25%;
+    height: 100%;
+    top: -300%;
+}
+
+div.pewbar {
+    position: absolute;
+    height: 10%;
+    background-color: red;
+}
+
+.pewbar:hover {
+    box-shadow: 5px 5px black;
+}
+
+#l50 {
+    width: 50%;
+    top: 20%;
+}
+
+#l24 {
+    width: 24%;
+    top: 70%;
+}
+
+#pewsource {
+    position: absolute;
+    bottom: -8%;
+    width: 100%;
+}
+
+p.sourcetxt {
+    text-align: right;
+    font-size: 2vw;
+}
+
+#pg1 {
+    background-color: #82E0AA;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#question {
+    text-align: center;
+}
+
+#findout {
+    text-align: center;
+}
+
+#initiate {
+    width: 300px;
+    height: 60px;
+    border-radius: 22px;
+    background-color: #00429e;
+    color: #15ecff;
+    font-size: 20pt;
+}
+
+#initiate:hover {
+    background-color: #2E86C1;
+}

@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+  <head>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="spreadsheet" type="text/css">
-      <style>#circle {
-               background-color: red;
-               border-radius: 50%;
-               height: 100px;
-               width: 100px; 
-               position: absolute;
-            }
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Water Use By Sector in the USA, Millions of Litres/Day', 'Percentange'],
+          ['Thermoelectric Power Generation', 503000],
+          ['Public, Municipal Use',  148000],
+          ['Aquaculture', 29000],
+          ['Livestock',  7600],
+          ['Mining', 15000],
+          ['Industrial', 56000],
+          ['Irrigation', 447000],
+        ]);
 
-         #bottom {
-                margin-top: 2000px;
-                height: 100px;
-            }</style>
+        var options = {
+          title: 'Water Use By Sector in the USA',
+          is3D: true,
+          sliceVisibilityThreshold: .04,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
   </head>
     <body>
       <div>
@@ -23,37 +38,64 @@
 
         </div>
 
-        <div id="bottom">
-
-        </div>
+       
   <div>
     <div>
       <h2>The Myth</h2>
-      <p>Percentange of Americans who believe making the following chsnges in their everyday lives will have a "large" impact in protecting the environment:</p>
+      <p>Percentange of Americans who believe making the following changes in their everyday lives has a "big difference" in protecting the environment:</p>
+      <div id="grap">
+        <div id="grap1"></div>
+        <div id="grap2"></div>
+        <div id="grap3"></div>
+        <div id="grap4"></div>
+        <div class="pewbar" id="l50"></div>
+        <div class="pewbar" id="l24"></div>
+      <div>
     </div>
     <div>
-      <p>Source: <a>Pew Research Center</a>
+
+    </div>
+    <div id="pewsource">
+      <p class="sourcetxt">Source: <a href="https://www.pewresearch.org/science/2019/11/25/u-s-public-views-on-climate-and-energy/">Pew Research Center</a>
       </p>
     </div>
   </div>
+  <div id="piechart_3d" style="width: 900px; height: 500px;">
+    
+  </div>
+  <div><p class="sourcetxt">Source: <a href="https://pubs.usgs.gov/circ/1441/circ1441.pdf">US Geological Survey</a></p></div>
+  </div>
+    <h2>
+      What is a water footprint?
+    </h2>
+    <p> Your water footprint is the amount of water that you use over your life. Many times people think about this as water you use to take a shower, but this can also
+     include water that is used to grow your food.</p>
+    <p> The amount of water it takes to grow the food you eat is part of your virtual water footprint. This is water that you don't personally flush down the drain, but which you are still responsible for,
+     as you created the demand for this water.</p>
+    <p> Your virtual water use is often much greater than the water that you use at home.
+     For example, according to the <i><a href="https://waterfootprint.org/en/resources/interactive-tools/product-gallery/">Water Footprint Network</a></i> 
+    to make just one kilogram of beef, it requires about 15415 litres of water! The <i><a href="https://water.usgs.gov/edu/activity-percapita.php">United States Geological Survey</a></i> states that a shower 
+    only uses about 8 litres of water a minute. In order to use as much water as it take
+    s to make a kilogram of beef, you could take a 32 hour long shower!</p>
+  </div>
 
-<!--         <script>
-            var windowHeight = window.innerHeight;
-            console.log(windowHeight);
-var scrollArea = 1000 - windowHeight;
+  <div id="pg1">
+    <h2 id="question">What is Your Water Footprint?</h2><p id="findout">Click to find out!</p><button id="initiate" onclick = "location.href='watercalculator/waterfootprintcalculator.html'">Begin!</button>
+  </div>  
+   <div id="bottom">
+
+        </div>
+  <!--<script>
+        var windowHeight = window.innerHeight;
+        
+        var scrollArea = 1000 - windowHeight;
         window.addEventListener('scroll', function() {
-        console.log("hi");
-  var scrollTop = window.pageYOffset //|| window.scrollTop;
-  var scrollPercent = scrollTop/scrollArea //|| 0;
-  console.log(scrollTop);
-  
-  document.getElementById("circle").style.top = scrollTop + 'px';
-  document.getElementById("circle").style.width = 
-  //square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
+        var scrollTop = window.pageYOffset //|| window.scrollTop;
+        var scrollPercent = scrollTop/scrollArea //|| 0;
+        document.getElementById("circle").style.top = scrollTop + 'px';
+        //document.getElementById("circle").style.width = 
+        //square2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
 });
-
-     
-
-</script>-->
+  </script>-->
     </body>
 </html>

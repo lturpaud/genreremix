@@ -1,28 +1,152 @@
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    
-    border-bottom: 17px solid black;
+body {
+    background-color: #A9DFBF;
+  }
+
+  .initiate {
+    width: 300px;
+    height: 60px;
+    border-radius: 22px;
+    background-color: #00429e;
+    color: #15ecff;
+    font-size: 20pt;
+    cursor: pointer;
+    left: 40%;
 }
 
-.arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    
-    border-top: 17px solid black;
+.initiate:hover {
+    background-color: #2E86C1;
 }
-
-.body {
-   background-color: ;
- }
 
 .pgs {
-   text-align: center;
+    text-align: center;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+ }
+ 
+.pgs p {
+    position: relative;
+    top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 5%;
+  padding-right: 5%;
+    color: #7a0038;
+    font-weight: 300;
+    font-size: 22.5pt;
+    margin-bottom: 1%;
 }
 
+.pgs div {
+    position: relative;
+    top: 40%;
+    font-size: 18pt;    
+    background-color: #D6EAF8;
+    width: 15%;
+    left: 42.5%;
+    border-radius: 25%/50%;
+}
 
+.pgs div .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-bottom: 43px solid #f4c094;
+    bottom: 34px;
+    left: 58%;
+    z-index: 5;
+    cursor: pointer;
+}
 
+.pgs div .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-top: 43px solid #f4c094;
+    position: relative;
+    top: 35px;
+    left: 12%;
+    z-index: 5;
+}
+
+.pgs div .arrow-up:hover {
+    border-bottom: 43px solid #dd975d;
+}
+
+.pgs div .arrow-down:hover {
+    border-top: 43px solid #dd975d;
+}
+
+.pgs .nextbutt {
+    position: relative;
+    top: 44%;
+    border-radius: 12%/50%;
+    width: 10%;
+    padding-top: 14px;
+    font-size: 15pt;
+    height: 35px;
+    left: 45%;
+    cursor: pointer;
+    background-color: #00429e;
+    color: #15ecff;
+}
+
+.pgs .nextbutt:hover {
+    background-color: #2E86C1;
+}
+
+.pgs ul.YeNoli{
+    position: relative;
+    top: 40%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: -2%;
+}
+
+.pgs ul.YeNoli li {
+    background-color: #00429e;
+    font-size: 15pt;
+    padding-top: 7px;
+    cursor: pointer;
+    padding-bottom: 7px;
+    color: #15ecff;
+    width: 10%;
+    float: left;
+    margin: 3px;
+    left: 39.5%;
+    position: relative;
+    border-radius: 12%/50%;
+}
+
+.pgs ul.YeNoli li:hover {
+    background-color: #2E86C1;
+}
+
+.n2p {
+    margin-top: 65px;
+} 
+
+#multiple {
+    width: 60%;
+    left: 20%;
+    border-radius: 9%/50%;
+}
+
+#mult2 {
+    width: 24%;
+    top: 0%;
+    left: 50%;
+    position: absolute;
+}
+
+#mult1 {
+    width: 24%;
+    left: 9%;
+    border-radius: 0;
+}
+ 
+ 

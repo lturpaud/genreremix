@@ -7,46 +7,132 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="script.js"></script>
     </head>
-      <div id="pg2">
-    <div><h2>First, let's ask a few questions about your direct water use.</h2><p>This is water that you flush down the drain, or water that you are directly responsible for.</div>
-    <button>OK</button>
-  </div>
-  <div id="pg3">
+    <div class="pgs" id="pg2">
+    <p>First, let's ask a few questions about your direct water use.</p><div style="background: transparent; width: 70%; left: 15%;">This is water that you flush down the drain, or water that you are directly responsible for.</div>
+    <button class="initiate" onclick = "next()" style="position:absolute; top: 60%;">OK</button>
+    </div>
+
+    <div class="pgs" id="pg3">
     <p>How many baths do you take every week?</p>
-    <div><div class="arrow-down" id="decreaseamount1" onclick="decreaseamount1()"></div><div>0</div><div class="arrow-up" id="increaseamount1" onclick="increaseamount1()"><div></div>
-  </div>
-  <div id="pg4">
+    <div>
+      <div class="arrow-down" id="decreaseamount1" onclick="decreaseamount1()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount1" onclick="increaseamount1()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+    </div>
+  <div class="pgs" id="pg4">
     <p>Do you have a "low flow" showerhead?</p>
-    <ul id="ShowerType"><li>yes</li><li>no</li></ul>
-    <p>How many showers do you take every week?</p>
-    <div><div class="arrow-down" id="decreaseamount2" onclick="decreaseamount2()"></div><div>0</div><div class="arrow-up" id="increaseamount2" onclick="increaseamount2()"></div></div>
-    <p>How long are your showers?</p>
-    <div><div class="arrow-down" id="decreaseamount3" onclick="decreaseamount3()"></div><div>0</div><div class="arrow-up" id="increaseamount3" onclick="increaseamount3()"></div><p>minutes</p></div>
-  </div>
-  <div id="pg5">
+    <ul id="ShowerType" class="YeNoli"><li>YES</li><li>NO</li></ul>
+    <p class="n2p">How many showers do you take every week?</p>
+    <div id="multiple">
+      <div id = "mult1">
+        <div class="arrow-down" id="decreaseamount2" onclick="decreaseamount2()"></div><div>0</div><div class="arrow-up" id="increaseamount2" onclick="increaseamount2()"></div>
+      </div>
+      <p style="position:absolute; left: 39%; top: 25%">times for</p>
+      <div id = "mult2">
+        <div class="arrow-down" id="decreaseamount3" onclick="decreaseamount3()"></div><div>0</div><div class="arrow-up" id="increaseamount3" onclick="increaseamount3()"></div>
+      </div>
+      <p style="position: absolute;
+    left: 80%;
+    top: 25%;">minutes</p>
+    </div>
+      <div class="nextbutt" onclick = "next()">NEXT ></div>
+    </div>
+  <div class="pgs" id="pg5">
     <p>Is your toilet water efficient?</p>
-    <ul><li>yes</li><li>no</li></ul>
-    <p>How many times do you flush the toilet everyday?</p>
+    <ul id="toitype" class="YeNoli"><li>YES</li><li>NO</li></ul>
+    <p class="n2p">How many times do you flush the toilet everyday?</p>
     <div><div class="arrow-down" id="decreaseamount4" onclick="decreaseamount4()"></div><div>0</div><div class="arrow-up" id="increaseamount4" onclick="increaseamount4()"></div></div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
   </div>
-  <div id="pg6">
+  <div class="pgs" id="pg6">
     <p>Are your faucets water efficient?</p>
-    <ul><li>yes</li><li>no</li></ul>
-    <p>About how many minutes are your faucets running for everyday?</p>
+    <ul id="ftype" class="YeNoli"><li>YES</li><li>NO</li></ul>
+    <p class="n2p">About how many minutes are your faucets running for everyday?</p>
     <div><div class="arrow-down" id="decreaseamount5" onclick="decreaseamount5()"></div><div>0</div><div class="arrow-up" id="increaseamount5" onclick="increaseamount5()"></div></div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
   </div>
-  <div id="pg7">
-    <p>How do you wash dishes?</p>
-    <ul><li>With my hands</li><li>Old dishwasher</li><li>Efficient Dishwasher</li></ul>
-    <p>How long does it take to wash dishes?</p>
-    <div><div class="arrow-down" id="decreaseamount6" onclick="decreaseamount6()"></div><div>0</div><div class="arrow-up" id="increaseamount6" onclick="increaseamount6()"></div></div>
-  </div>
-  <div id="pg8">
+  <div class="pgs" id="pg8">
     <p>Is your the laundry machine you use efficient?</p>
-    <ul><li>yes</li><li>no</li></ul>
-    <p>How many loads do you do a week?</p>
+    <ul class="YeNoli" id="ltype"><li>YES</li><li>NO</li></ul>
+    <p class="n2p">How many loads do you do a week?</p>
     <div><div class="arrow-down" id="decreaseamount7" onclick="decreaseamount7()"></div><div>0</div><div class="arrow-up" id="increaseamount7" onclick="increaseamount7()"></div></div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
   </div>
-    <body>
+  <div class="pgs" id="pg9">
+    <p>Congrats! You are halfway done!...</p>
+    <div style="background: transparent; width: 70%; left: 15%; margin-top: -2.5%;">But the bulk of your water use has yet to be logged.</div>
+    <p>Now, let's look at your virtual water use.</p>
+    <div style="background: transparent; width: 70%; left: 15%; margin-top: -2.5%;">This is the invisible water-such as the water needed to grow the food you eat.</div>
+    <button class="initiate" onclick = "next()" style="position:absolute; top: 67%;">Let's Go!</button>
+  </div>
+  <div class="pgs" id="pg10">
+    <p>About how many kilograms of beef do you eat every month?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount8" onclick="decreaseamount8()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount9" onclick="increaseamount9()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg11">
+    <p>About how many kilograms of pork do you eat every month?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount9" onclick="decreaseamount9()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount10" onclick="increaseamount9()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg12">
+    <p>About how many kilograms of chicken do you eat every month?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount10" onclick="decreaseamount1()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount11" onclick="increaseamount1()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg13">
+    <p>About how many glasses of milk do you drink every week?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount11" onclick="decreaseamount1()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount12" onclick="increaseamount1()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg14">
+    <p>About how many cotton shirts do you buy every year?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount12" onclick="decreaseamount1()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount13" onclick="increaseamount1()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg15">
+    <p>About how many jeans do you buy every year?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount13" onclick="decreaseamount1()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount14" onclick="increaseamount1()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg16">
+    <p>About how many kWh of electricity do you use every month?</p>
+    <div>
+      <div class="arrow-down" id="decreaseamount14" onclick="decreaseamount1()"></div>
+      <div>0</div>
+      <div class="arrow-up" id="increaseamount15" onclick="increaseamount1()"></div>
+      </div>
+    <div class="nextbutt" onclick = "next()">NEXT ></div>
+  </div>
+  <div class="pgs" id="pg17">
+    <p>Congrats! Your Daily Average Water Footprint is:</p><p>0</p>
+  <div style="font-size: 10pt">Sources: <a href="https://waterfootprint.org/en/resources/interactive-tools/product-gallery/">water footprint network,</a><a href="https://water.usgs.gov/edu/activity-percapita.php">USGS</a><a href=""></a></div></div>
+  
  </body>
 </html>

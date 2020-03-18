@@ -86,7 +86,19 @@ function next(){
     var sum = watuse.reduce(function(a, b){
         return a + b;
     }, 0);
-    document.getElementById("results").innerHTML= sum;
+    watuse[8] = min[8] * 14100/30;
+watuse[9] = min[9] * 6000/30;
+watuse[10] = min[10] * 4300/31;
+watuse[11] = min[11] * 250/7;
+watuse[12] = min[12] * 2500/365;
+watuse[13] = min[13] * 8000/365;
+watuse[14] = min[14] * 60/31;
+    var sum1 = watuse.slice(0,6).reduce((a,b) => a + b);//sum up
+    var sum2 = watuse.slice(8,17).reduce((a,b) => a + b)
+    document.getElementById("results").innerHTML= sum + "litres per day";
+    document.getElementById("results1").innerHTML= "Your total direct water use is:" + sum1 + "litres per day";
+    document.getElementById("results2").innerHTML= "Your total virtual water use is:" + sum2 + "litres per day";
+    console.log(sum1, sum2);
 }
 
 function increaseamount2() {
@@ -239,21 +251,4 @@ function decreaseamount8() {
 }function decreaseamount14() {
     min[14] -= 1;
     document.getElementById("decreaseamount14").nextElementSibling.innerHTML = min[14];
-}function decreaseamount15() {
-    min[15] -= 1;
-    document.getElementById("decreaseamount15").nextElementSibling.innerHTML = min[15];
-}function decreaseamount16() {
-    min[16] -= 1;
-    document.getElementById("decreaseamount16").nextElementSibling.innerHTML = min[16];
-}function decreaseamount17() {
-    min[17] -= 1;
-    document.getElementById("decreaseamount17").nextElementSibling.innerHTML = min[17];
 }
-
-watuse[8] = min[8] * 14100/30;
-watuse[9] = min[9] * 6000/30;
-watuse[10] = min[10] * 4300/31;
-watuse[11] = min[11] * 250/7;
-watuse[12] = min[12] * 2500/365;
-watuse[13] = min[13] * 8000/365;
-watuse[14] = min[14] * 60/31;

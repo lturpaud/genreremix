@@ -72,11 +72,15 @@ div.pewbar {
 #l50 {
     width: 50%;
     top: 20%;
+    font-size: 20pt;
+    height: 20%;
 }
 
 #l24 {
     width: 24%;
     top: 70%;
+    font-size: 20pt;
+    height: 20%;
 }
 
 #pewsource {

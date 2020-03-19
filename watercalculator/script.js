@@ -219,7 +219,7 @@ function increaseamount8() {
     min[13] += 1;
     document.getElementById("increaseamount14").previousElementSibling.innerHTML = min[13];
 }function increaseamount15() {
-    min[14] += 1;
+    min[14] += 100;
     document.getElementById("increaseamount15").previousElementSibling.innerHTML = min[14];
 }function increaseamount16() {
     min[15] += 1;
@@ -249,6 +249,6 @@ function decreaseamount8() {
     min[13] -= 1;
     document.getElementById("decreaseamount13").nextElementSibling.innerHTML = min[13];
 }function decreaseamount14() {
-    min[14] -= 1;
+    min[14] -= 100;
     document.getElementById("decreaseamount14").nextElementSibling.innerHTML = min[14];
 }
